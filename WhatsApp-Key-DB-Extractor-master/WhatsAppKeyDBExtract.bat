@@ -12,7 +12,7 @@ echo = permissions. You will NOT lose ANY data and your current version will =
 echo = be restored at the end of the extraction process so try not to panic. =
 echo = Script by: TripCode (Greets to all who visit: XDA Developers Forums). =
 echo = Thanks to: dragomerlin for ABE and to Abinash Bishoyi for being cool. =
-echo =         ###          Version: v4.7 (12/10/2016)          ###          =
+echo =         ###          Version: v5.1 (12/10/2020)          ###          =
 echo =========================================================================
 echo.
 if not exist bin (
@@ -101,13 +101,6 @@ bin\adb.exe shell pm uninstall -k com.whatsapp
 echo Removal complete
 echo.
 )
-echo Installing legacy WhatsApp 2.11.431
-if %sdkver% geq 17 (
-bin\adb.exe install -r -d tmp\LegacyWhatsApp.apk
-) else (
-bin\adb.exe install -r tmp\LegacyWhatsApp.apk
-)
-echo Install complete
 echo.
 if %sdkver% geq 23 (
 bin\adb.exe backup -f tmp\whatsapp.ab com.whatsapp
